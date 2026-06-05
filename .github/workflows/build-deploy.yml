@@ -15,7 +15,7 @@ jobs:
 
     services:
       postgres:
-        image: postgres
+        image: postgres:16-alphine
         env:
           POSTGRES_PASSWORD: ${{env.DATABASE_PASSWORD}}
           POSTGRES_DB: ${{env.DATABASE_NAME}}
