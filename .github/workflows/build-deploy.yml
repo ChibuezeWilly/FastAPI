@@ -5,8 +5,9 @@ on: [push, pull_request]
 jobs:
   job1:
     name: Run Automated Test Suite
+    environment: 'TEST DATABASE'
     env:
-      DATABASE_URL: ${{secrets.DATABASE_URL}}
+      DATABASE_URL: ${{secrets.DATABASE_URL_TEST}}
       SECRET_KEY: ${{secrets.SECRET_KEY}}
       ALGORITHM: ${{secrets.ALGORITHM}}
       ACCESS_TOKEN_EXPIRE_MINUTES: ${{secrets.ACCESS_TOKEN_EXPIRE_MINUTES}}
